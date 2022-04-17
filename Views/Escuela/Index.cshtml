@@ -1,10 +1,13 @@
-﻿@{
+﻿@model Escuela /*Nos dice que usaremos el modelo derivado de la escuela ya que sin esto el codigo Razor donde llamamos las propiedades son debilmente tipados*/
+
+@{
     ViewData["Title"] = "Información Escuela";
+    Layout="_Layout";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Escuela</h1>
-    <h2>Nombre: </h2>
-    <h2>Año Fundación:</h2>
+    <h1 class="display-4">Escuela: @Model.Id</h1>
+    <h2>Nombre: @Model.Nombre </h2>
+    <h2>Año Fundación: @Model.AnioFundacion</h2>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
